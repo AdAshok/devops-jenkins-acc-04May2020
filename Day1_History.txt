@@ -183,3 +183,130 @@
   183  rm -rf file*
   184  ls
   185  history > Day1_History.txt
+  186  git add . ; git commit -m "Day1_History.txt" ; git push 
+  187  ls
+  188  cd ..
+  189  ls
+  190  cd myproject-git/
+  191  ls
+  192  git pull 
+  193  ls
+  194  vim .gitignore
+  195  ls
+  196  echo "My Creds" > creds.txt
+  197  cat .gitignore 
+  198  ls
+  199  git status 
+  200  git add . 
+  201  git status 
+  202  vi .gitignore 
+  203  git status 
+  204  git add . 
+  205  git status 
+  206  echo "creds.txt" > .gitignore
+  207  ls -a 
+  208  vim .gitignore 
+  209  git add . 
+  210  git status 
+  211  git add . ; git commit -m "GitIgnore"; git push 
+  212  ls
+  213  touch .gitignore
+  214  ls -a
+  215  vim creds.txt 
+  216  ls
+  217  vim .gitignore 
+  218  ls
+  219  git --version 
+  220  ls
+  221  rm -rf creds.txt 
+  222  ls
+  223  git add . ; git commit -m "cred has beem removed"; git push 
+  224  ls
+  225  ls -a 
+  226  echo "aws_creds" > aws_creds.txt
+  227  ls
+  228  vim .gitignore 
+  229  ls
+  230  vim .gitignore 
+  231  ls
+  232  vim .gitignore 
+  233  ls
+  234  cat .gitignore 
+  235  git add . 
+  236  git status 
+  237  ls
+  238  echo "GCP_Credentials" > gcp_creds.txt
+  239  echo "gcp_creds.txt" >> .gitignore 
+  240  ls
+  241  git add . 
+  242  git status 
+  243  git commit -m ".gitignore modified"
+  244  git push 
+  245  ls
+  246  git branch 
+  247  git branch testing
+  248  git branch 
+  249  git branch devlopment
+  250  git branch 
+  251  git checkout devlopment
+  252  git branch 
+  253  cat .git/HEAD 
+  254  ls
+  255  rm -rf Day1_History.txt 
+  256  ls
+  257  echo "Welcome to the Devlopment Branch" > Dev.txt
+  258  git add . ; git commit -m "Devlopment Branch"; git push 
+  259  ls
+  260  git branch
+  261  git checkout testing
+  262  ls
+  263  echo "Welcome to the Testing Branch" > Test.txt
+  264  git add . ; git commit -m "Testing Branch"; git push 
+  265  git push --set-upstream origin testing
+  266  ls
+  267  git branch 
+  268  git merge devlopment
+  269  ls
+  270  git branch 
+  271  git status 
+  272  git push 
+  273  ls
+  274  git checkout master 
+  275  ls
+  276  git branch 
+  277* l
+  278  git merge testing -m "Testing into Master"
+  279  ls
+  280  git push 
+  281  git logs 
+  282  git log
+  283  ls
+  284  git logs
+  285  git log
+  286  ls
+  287  git checkout 6b4c668c9fd1cb5af7bca67b304d2eacc83764a9
+  288  ls
+  289  git branch 
+  290  ls
+  291  git checkout master
+  292  ls
+  293  git log 
+  294  git checkout 4e5e360f031071f197f9dbc405f4b93e78bbf8c6
+  295  ls
+  296  git branch 
+  297  git checkout master 
+  298  ls
+  299  git rest --soft HEAD~1
+  300  git reset --soft HEAD~1
+  301  ls
+  302  git logs
+  303  git log
+  304  git reset --hard HEAD~1
+  305  ls
+  306  git log 
+  307  git branch 
+  308  ls
+  309  l
+  310  history 
+  311  ls
+  312  history > Day1_History.txt 
