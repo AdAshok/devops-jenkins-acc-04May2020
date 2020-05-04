@@ -319,3 +319,51 @@
   319  ls
   320  git add . ; git commit -m "Day1_History.txt - Gone"; git push 
   321  history > Day1_History.txt
+  322  git add . ; git commit -m "Day1_History.txt"; git push 
+  323  git log --oneline 
+  324  git log --oneline | wc -l 
+  325  git log --oneline --graph 
+  326  git log
+  327  git log --oneline
+  328  git log --oneline --graph 
+  329  git shortlog
+  330  ls
+  331  git branch 
+  332  git branch --help
+  333  git branch 
+  334  git branch -d testing
+  335  git branch 
+  336  git branch -d test-branch
+  337  git branch -d devlopment
+  338  l
+  339  git branch 
+  340  git logs
+  341  git log
+  342  ls
+  343  git tag testapp_r1_20200504
+  344  ls
+  345  rm -rf Dev.txt 
+  346  git add . ; git commit -m "Dev.txt-Removed"
+  347  rm -rf Test.txt 
+  348  git add . ; git commit -m "Test.txt-Removed"
+  349  ls
+  350  rm -rf README.md 
+  351  git add . ; git commit -m "README-Removed"
+  352  ls
+  353  git log
+  354  ls
+  355  cat .git/HEAD 
+  356  cat .git/refs/heads/master
+  357  git tags 
+  358  git tag
+  359  cat .git/refs/tags/testapp_r1_20200504 
+  360  git log 
+  361  git tag testapp_r2_20200504
+  362  ls
+  363  rm -rf Hello.txt 
+  364  ls
+  365  git add . ; git commit -m "Hello-Removed"
+  366  git push 
+  367  git push --tags 
+  368  ls
+  369  history > Day1_History.txt 
