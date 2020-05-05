@@ -1,0 +1,23 @@
+    1  history 
+    2  git branch 
+    3  git checkout demo-code
+    4  history 
+    5  apt-get update; apt-get install default-jdk maven wget  -y 
+    6  java --version 
+    7  java -version 
+    8  mvn --version 
+    9  ls
+   10  cd 
+   11  ls
+   12  wget http://mirrors.jenkins.io/war-stable/latest/jenkins.war 
+   13  ls
+   14  java -jar jenkins.war --httpPort=9090 & 
+   15  ip addr 
+   16  cat /root/.jenkins/secrets/initialAdminPassword
+   17  ls
+   18  cd myproject-git/
+   19  ls
+   20  cd 02-Jenkins/
+   21  ls
+   22  history 
+   23  history > Day2_History
