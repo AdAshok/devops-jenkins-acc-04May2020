@@ -1,0 +1,14 @@
+# Base Image
+FROM ubuntu:16.04
+
+# Owner of an Image ( META Info ) 
+MAINTAINER Amit Vashist <amitvashist7@gmail.com>
+
+# Update Apt Repo. 
+RUN apt-get update 
+
+# Install apache package 
+RUN apt-get install apache2 -y 
+
+# Start the Apache Service 
+CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
