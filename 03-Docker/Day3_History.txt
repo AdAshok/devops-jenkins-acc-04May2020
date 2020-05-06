@@ -1,0 +1,139 @@
+    1  history 
+    2  git branch 
+    3  git checkout demo-code
+    4  history 
+    5  apt-get update; apt-get install default-jdk maven wget  -y 
+    6  java --version 
+    7  java -version 
+    8  mvn --version 
+    9  ls
+   10  cd 
+   11  ls
+   12  wget http://mirrors.jenkins.io/war-stable/latest/jenkins.war 
+   13  ls
+   14  java -jar jenkins.war --httpPort=9090 & 
+   15  ip addr 
+   16  cat /root/.jenkins/secrets/initialAdminPassword
+   17  ls
+   18  cd myproject-git/
+   19  ls
+   20  cd 02-Jenkins/
+   21  ls
+   22  history 
+   23  history > Day2_History
+   24  git add . ; git commit -m "Day2_History"; git push 
+   25  git push --set-upstream origin demo-code
+   26  ls
+   27  cd 
+   28  ls
+   29  docker version 
+   30  docker images 
+   31  docker ps 
+   32  docker ps -a
+   33  docker version 
+   34  docker images 
+   35  docker ps -a 
+   36  docker run busybox echo "Welcome to Docker Demo."
+   37  docker images 
+   38  docker ps 
+   39  docker ps -a
+   40  hisr
+   41  history 
+   42  docker ps 
+   43  docker ps -a 
+   44  history 
+   45  cd /var/lib/docker/
+   46  ls
+   47  cd containers/
+   48  ls
+   49  docker ps 
+   50  docker ps -a
+   51  ls
+   52  cd 
+   53  ls
+   54  docker images 
+   55  docker pull ubuntu
+   56* docker images
+   57  docker pull ubuntu:16.04
+   58  docker search ubuntu:16.04
+   59  docker images 
+   60  docker run -it ubuntu:16.04 
+   61  uname -a 
+   62  docker run -it centos:7  
+   63  docker ps 
+   64  docker run -it centos:7  
+   65  docker ps 
+   66  docker run -it centos:7  
+   67  docker ps 
+   68  docker ps -a 
+   69  ls
+   70  docker ps 
+   71  docker attach 2fa8957a3b99
+   72  docker ps 
+   73  docker attach 2fa8957a3b99
+   74  docker ps 
+   75  docker attach 2fa8957a3b99
+   76  docker ps 
+   77  docker ps -a 
+   78  docker ps 
+   79  docker start  2fa8957a3b99
+   80  docker ps 
+   81  docker stop  2fa8957a3b99
+   82  ls
+   83  docker ps 
+   84  docker ps -a
+   85  docker start 2fa8957a3b99
+   86  docker ps 
+   87  docker attach 2fa8957a3b99
+   88  docker ps 
+   89  docker attach 2fa8957a3b99
+   90  docker ps 
+   91  curl 2fa8957a3b99
+   92  docker inspect 2fa8957a3b99
+   93  curl 172.17.0.5
+   94  docker kill 2fa8957a3b99
+   95  docker start 2fa8957a3b99
+   96  docker inspect 2fa8957a3b99
+   97  curl 172.17.0.5
+   98  docker inspect 2fa8957a3b99
+   99  docker attach 2fa8957a3b99
+  100  curl 172.17.0.5
+  101  docker run -it ubuntu 
+  102  docker start 2fa8957a3b99
+  103  docker inspect 2fa8957a3b99
+  104  curl 172.17.0.6
+  105  docker attach 2fa8957a3b99
+  106  docker start 2fa8957a3b99
+  107  curl 172.17.0.6
+  108  ls
+  109  docker ps 
+  110  docker commit -p -m "My Firts CentOS Apache" 2fa8957a3b99 centos-test-apache:v1
+  111  docker images 
+  112  docker run -it --name test-apache-continer-01 centos-test-apache:v1 
+  113  docker ps 
+  114  docker inspect test-apache-continer-01
+  115  curl 172.17.0.7
+  116  docker run -it --name test-apache-continer-02 centos-test-apache:v1 /bin/bash
+  117  curl 172.17.0.8
+  118  docker attach centos-test-apache:v1 
+  119  docker attach test-apache-continer-02
+  120  curl 172.17.0.8
+  121  docker attach test-apache-continer-02
+  122  docker run -it --name test-apache-continer-03 centos-test-apache:v1 /bin/bash
+  123  docker inspect test-apache-continer-03
+  124  curl 172.17.0.9
+  125  docker run -it --name test-apache-continer-04 centos-test-apache:v1 /bin/bash
+  126  docker ps 
+  127  docker logs test-apache-continer-04
+  128  tail -f  /var/log/syslog
+  129  ls
+  130  cd myproject-git/
+  131  ls
+  132  git pull 
+  133  ls
+  134  git branch 
+  135  mkdir 03-Docker
+  136  ls
+  137  cd 03-Docker/
+  138  ls
+  139  history > Day3_History.txt
