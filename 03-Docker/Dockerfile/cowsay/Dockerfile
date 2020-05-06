@@ -8,11 +8,7 @@ MAINTAINER Amit Vashist <amitvashist7@gmail.com>
 RUN apt-get update 
 
 # Install apache package 
-RUN apt-get install apache2 -y 
-
-# Deploy Custom Index Page
-COPY index.html /var/www/html/index.html
-COPY cow.html /var/www/html/cow.html
+RUN apt-get install cowsay -y 
 
 # Start the Apache Service 
-CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
+CMD ["/usr/games/cowsay", "Dockerfile is Awesome.!!"]

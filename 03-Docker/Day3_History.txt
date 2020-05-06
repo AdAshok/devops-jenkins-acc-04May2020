@@ -1,304 +1,278 @@
-    1  ls
-    2  date
-    3  cat /tmp/jenkins7470350145532769689.sh
-    4  ls
-    5  cd /root/.jenkins/
-    6  ls
-    7  cd workspace/
-    8  ls
-    9  cd Test-Job-Netstat/
-   10  ls
-   11  d 
-   12  cd 
+    1  history 
+    2  git branch 
+    3  git checkout demo-code
+    4  history 
+    5  apt-get update; apt-get install default-jdk maven wget  -y 
+    6  java --version 
+    7  java -version 
+    8  mvn --version 
+    9  ls
+   10  cd 
+   11  ls
+   12  wget http://mirrors.jenkins.io/war-stable/latest/jenkins.war 
    13  ls
-   14  cd myproject-git/
-   15  ls
-   16  cd ..
+   14  java -jar jenkins.war --httpPort=9090 & 
+   15  ip addr 
+   16  cat /root/.jenkins/secrets/initialAdminPassword
    17  ls
-   18  git clone https://github.com/amitvashisttech/mindtree-devops-27April2020.git
+   18  cd myproject-git/
    19  ls
-   20  cd mindtree-devops-27April2020/
+   20  cd 02-Jenkins/
    21  ls
-   22  du -sh * 
-   23  git branch 
-   24  git branch -r 
-   25  git checkout origin/development
+   22  history 
+   23  history > Day2_History
+   24  git add . ; git commit -m "Day2_History"; git push 
+   25  git push --set-upstream origin demo-code
    26  ls
-   27  cp -rf petclinic-code ../myproject-git/
+   27  cd 
    28  ls
-   29  cd ..ls
-   30  cd ..
-   31  ls
-   32  cd myproject-git/
-   33  ls
-   34  mv petclinic-code 02-Jenkins/
-   35  ls
-   36  cd 02-Jenkins/
-   37  ls
-   38  cd petclinic-code/
-   39  ls
-   40  rm -rf docker-compose.yaml  Dockerfile 
-   41  ls
-   42  cd ..
-   43  ls
-   44  cd ..
-   45  ls
-   46  cd 02-Jenkins/
-   47  ls
-   48  cd petclinic-code/
-   49  ls
-   50  cd src/
+   29  docker version 
+   30  docker images 
+   31  docker ps 
+   32  docker ps -a
+   33  docker version 
+   34  docker images 
+   35  docker ps -a 
+   36  docker run busybox echo "Welcome to Docker Demo."
+   37  docker images 
+   38  docker ps 
+   39  docker ps -a
+   40  hisr
+   41  history 
+   42  docker ps 
+   43  docker ps -a 
+   44  history 
+   45  cd /var/lib/docker/
+   46  ls
+   47  cd containers/
+   48  ls
+   49  docker ps 
+   50  docker ps -a
    51  ls
-   52  cd main/
+   52  cd 
    53  ls
-   54  cd java/
-   55  ls
-   56  cd org/springframework/samples/
-   57  ls
-   58  cd petclinic/
-   59  ls
-   60  cat PetclinicInitializer.java 
-   61  ls
-   62  cd ..
-   63  ls
-   64  cd ..
-   65  ls
-   66  cd ..
-   67  ls
-   68  cd ..
+   54  docker images 
+   55  docker pull ubuntu
+   56* docker images
+   57  docker pull ubuntu:16.04
+   58  docker search ubuntu:16.04
+   59  docker images 
+   60  docker run -it ubuntu:16.04 
+   61  uname -a 
+   62  docker run -it centos:7  
+   63  docker ps 
+   64  docker run -it centos:7  
+   65  docker ps 
+   66  docker run -it centos:7  
+   67  docker ps 
+   68  docker ps -a 
    69  ls
-   70  cd ..
-   71  ls
-   72  cd ..
-   73  ls
-   74  mvn --version 
-   75  ls
-   76  mvn clean 
-   77  ls
-   78  mvn compile 
-   79  ls
-   80  cd target/
-   81  ls
-   82  cd classes/
-   83  ls
-   84  cd ..
-   85  ls
-   86  cd ..
-   87  ls
-   88  mvn test 
-   89  ls
-   90  cd target/
-   91  ls
-   92  cd ..
-   93  ls
-   94  mvn package
-   95  ls
-   96  cd target/
-   97  ls
-   98  java -jar petclinic.war
-   99  ls
-  100  cd ..
-  101  ls
-  102  mvn clean 
-  103  ls
-  104  cd ..
-  105  ls
-  106  cd ..
-  107  ls
-  108  git add . ; git commit -m "petclinic-code"; git push 
-  109  cd /root/.jenkins/workspace/Petclinic-free-style-job
-  110  ls
-  111  cd 02-Jenkins/
-  112  ls
-  113  cd petclinic-code/
-  114  ls
-  115  cd ..
-  116  ls
-  117  cd ..
-  118  ls
-  119  cd 
-  120  ls
-  121  cd 
-  122  ls
-  123  cd /root/.jenkins/
-  124  ls
-  125  cd workspace/
-  126  ls
-  127  cd Petclinic-free-style-job/
-  128  ls
-  129  cd 02-Jenkins/
-  130  ls
-  131  cd petclinic-code/
-  132  ls
-  133  cd target/
-  134  ls
-  135  cd
+   70  docker ps 
+   71  docker attach 2fa8957a3b99
+   72  docker ps 
+   73  docker attach 2fa8957a3b99
+   74  docker ps 
+   75  docker attach 2fa8957a3b99
+   76  docker ps 
+   77  docker ps -a 
+   78  docker ps 
+   79  docker start  2fa8957a3b99
+   80  docker ps 
+   81  docker stop  2fa8957a3b99
+   82  ls
+   83  docker ps 
+   84  docker ps -a
+   85  docker start 2fa8957a3b99
+   86  docker ps 
+   87  docker attach 2fa8957a3b99
+   88  docker ps 
+   89  docker attach 2fa8957a3b99
+   90  docker ps 
+   91  curl 2fa8957a3b99
+   92  docker inspect 2fa8957a3b99
+   93  curl 172.17.0.5
+   94  docker kill 2fa8957a3b99
+   95  docker start 2fa8957a3b99
+   96  docker inspect 2fa8957a3b99
+   97  curl 172.17.0.5
+   98  docker inspect 2fa8957a3b99
+   99  docker attach 2fa8957a3b99
+  100  curl 172.17.0.5
+  101  docker run -it ubuntu 
+  102  docker start 2fa8957a3b99
+  103  docker inspect 2fa8957a3b99
+  104  curl 172.17.0.6
+  105  docker attach 2fa8957a3b99
+  106  docker start 2fa8957a3b99
+  107  curl 172.17.0.6
+  108  ls
+  109  docker ps 
+  110  docker commit -p -m "My Firts CentOS Apache" 2fa8957a3b99 centos-test-apache:v1
+  111  docker images 
+  112  docker run -it --name test-apache-continer-01 centos-test-apache:v1 
+  113  docker ps 
+  114  docker inspect test-apache-continer-01
+  115  curl 172.17.0.7
+  116  docker run -it --name test-apache-continer-02 centos-test-apache:v1 /bin/bash
+  117  curl 172.17.0.8
+  118  docker attach centos-test-apache:v1 
+  119  docker attach test-apache-continer-02
+  120  curl 172.17.0.8
+  121  docker attach test-apache-continer-02
+  122  docker run -it --name test-apache-continer-03 centos-test-apache:v1 /bin/bash
+  123  docker inspect test-apache-continer-03
+  124  curl 172.17.0.9
+  125  docker run -it --name test-apache-continer-04 centos-test-apache:v1 /bin/bash
+  126  docker ps 
+  127  docker logs test-apache-continer-04
+  128  tail -f  /var/log/syslog
+  129  ls
+  130  cd myproject-git/
+  131  ls
+  132  git pull 
+  133  ls
+  134  git branch 
+  135  mkdir 03-Docker
   136  ls
-  137  cd myproject-git/
+  137  cd 03-Docker/
   138  ls
-  139  cd 02-Jenkins/
+  139  history > Day3_History.txt
   140  ls
-  141  cd petclinic-code/
+  141  cd ..
   142  ls
-  143  cd ..
-  144  ls
-  145  cd ..
-  146  cd 
-  147  ls
-  148  cd /root/.jenkins/
-  149  ls
-  150  cd workspace/
+  143  git add . ; git commit -m "Day3_History.txt"; git push 
+  144  docker ps 
+  145  docker run -it ubuntu:16.04
+  146  docker run -it centos:7
+  147  docker run -it busybox
+  148  ls
+  149  docker imags 
+  150  docker images 
   151  ls
-  152  cd ..
+  152  cd 03-Docker/
   153  ls
-  154  ls -ltr workspace/Petclinic-free-style-job/02-Jenkins/petclinic-code/target/petclinic.war 
+  154  mkdir Dockerfile
   155  ls
-  156  cd jobs/
+  156  mkdir Dockerfile/apache
   157  ls
-  158  cd Petclinic-free-style-job/
+  158  cd Dockerfile/apache/
   159  ls
-  160  cd builds/
-  161  ls
-  162  cd ..
+  160  vim Dockerfile
+  161  docker ps 
+  162  cat Dockerfile 
   163  ls
-  164  ls -ltr workspace/Petclinic-free-style-job/02-Jenkins/petclinic-code/target/petclinic.war 
-  165  ls -ltr jobs/Petclinic-free-style-job/builds/3/archive/02-Jenkins/petclinic-code/target/petclinic.war 
-  166  ls -ltr jobs/Petclinic-free-style-job/builds/4/archive/02-Jenkins/petclinic-code/target/petclinic.war 
-  167  ls -ltr jobs/Petclinic-free-style-job/builds/3/archive/02-Jenkins/petclinic-code/target/petclinic.war 
-  168  cd 
-  169  ls
-  170  cd myproject-git/
+  164  docker images 
+  165  docker build ubuntu16-04-test-apache:v1 . 
+  166  docker build -t ubuntu16-04-test-apache:v1 . 
+  167  docker ps 
+  168  docker imags 
+  169  docker images 
+  170  docker run -d --name cont-01 
   171  ls
-  172  git branch
-  173  git branch jenkins-job
-  174  git branch
-  175  git checkout jenkins-job
-  176  ls
-  177  rm -rf 02-Jenkins/
-  178  ls
-  179  mkdir Jenkins-Files/devlopment -p 
-  180  vim Jenkins-Files/devlopment/Jenkinsfile
-  181  ls
-  182  cd ..
-  183  cd - 
-  184  git add . ; git commit -m "Jenkins-Files"; git push 
-  185  git push --set-upstream origin jenkins-job
+  172  cd ls
+  173  ls
+  174  vim index.html
+  175  ls
+  176  vim Dockerfile 
+  177  docker images 
+  178  docker build -t ubuntu16-04-test-apache:v2 . 
+  179  ls
+  180  docker images 
+  181  docker run -d --name cont-03 ubuntu16-04-test-apacheLv2
+  182  docker run -d --name cont-03 ubuntu16-04-test-apache:v2
+  183  docker run -d --name cont-04 ubuntu16-04-test-apache:v2
+  184  docker inspect cont-04
+  185  curl 172.17.0.14
   186  ls
-  187  git checkout demo-code
-  188  ls
-  189  echo "01" > CHANME.txt
-  190  ls
-  191  mv CHANME.txt CHANGEME.txt
-  192  ls
-  193  git add . ; git commit -m "Test-01 :CHANGEME" ; git push 
-  194* git br
-  195  s
+  187  cat index.html 
+  188  cat Dockerfile 
+  189  ls
+  190  cat cow.html 
+  191  ls
+  192  cat Dockerfile 
+  193  docker ps 
+  194  curl localhost:8084
+  195  curl localhost:8084/cow.html
   196  ls
-  197  git checkout jenkins-job
-  198  ks
-  199  ls
-  200  vim Jenkins-Files/
-  201  ls
-  202  cd Jenkins-Files/
-  203  ls
-  204  cd devlopment/
+  197  cd ls
+  198  ls
+  199  docker images 
+  200  docker kill $(docker ps -aq)
+  201  docker rm $(docker ps -aq)
+  202  docker ps 
+  203  docker images 
+  204  docker run -d --name test-01 ubuntu16-04-test-apache:v1
   205  ls
-  206  cp -rf Jenkinsfile Basic 
-  207  vim Jenkinsfile 
-  208  ls
-  209  cd ..
-  210  ls
-  211  cd ..
-  212  ls
-  213  git add . ; git commit -m "Jenkins-Files-SCM"; git push 
-  214  ls
-  215  cd 
-  216  cd /root/.jenkins/workspace/Petclinic-Project-Pipeline-as-a-code-scm/
-  217  ls
-  218  cd ..
+  206  docker ps 
+  207  curl 172.17.0.2
+  208  curl localhost
+  209  docker run -d --name test-01 -p 8082:80 ubuntu16-04-test-apache:v1
+  210  docker run -d --name test-02 -p 8082:80 ubuntu16-04-test-apache:v1
+  211  docker ps 
+  212  curl localhost
+  213  curl localhost:8082
+  214  docker run -d --name test-03 -p 8083:80 ubuntu16-04-test-apache:v2
+  215  docker run -d --name test-04 -p 8084:80 ubuntu16-04-test-apache:v3
+  216  docker ps 
+  217  netstat -tulnp 
+  218  history 
   219  ls
-  220  cd Petclinic-pipeline
+  220  cd ..
   221  ls
-  222  cd 02-Jenkins/petclinic-code/target/
-  223  ls
-  224  cd surefire-reports/
-  225  ls
-  226  cd ..
-  227  ls
-  228  cd ..
-  229  ls
-  230  cd target/
+  222  docker-compose 
+  223  docker-compose version 
+  224  ls
+  225  cd ..
+  226  ls
+  227  mkdir -p DockerCompose/{apache,petclinic}
+  228  ls
+  229  cd DockerCompose/ls
+  230  cd DockerCompose/
   231  ls
-  232  cd surefire-reports/
+  232  cd apache/
   233  ls
-  234  cat TEST-org.springframework.samples.petclinic.model.ValidatorTests.xml
+  234  cp -rf ../../Dockerfile/apache/* . 
   235  ls
-  236  cd ..
+  236  vim index.html 
   237  ls
-  238  cd ..
+  238  vim docker-compose.yaml
   239  ls
-  240  cd ..ls
-  241  cd ..
+  240  docker-compose up -d 
+  241  docker ps 
   242  ls
-  243  ls -ltr 02-Jenkins/petclinic-code/target/surefire-reports/TEST-*.xml
-  244  cd ..
-  245  ls
-  246  cd Petclinic-pipeline
-  247  ls
-  248  cd 02-Jenkins/
-  249  ls
-  250  cd petclinic-code
-  251  ls
-  252  cd target/
-  253  ls
-  254  cd surefire-reports/
-  255  ls
-  256  cd ..
-  257  l
-  258  cd site/ls
-  259  ls
-  260  cd site/
-  261  ls
-  262  cd jacoco/
-  263  ls
-  264  cat index.html 
-  265  cd ../../
+  243  cat docker-compose.yaml 
+  244  ls
+  245  docker images 
+  246  ls
+  247  vim docker-compose.yaml 
+  248  docker-compose up -d 
+  249  docker-compose ps 
+  250  ls
+  251  docker-compose stop 
+  252  docker-compose rm 
+  253  docker ps 
+  254  ls
+  255  cd ..
+  256  ls
+  257  cd petclinic/
+  258  ls
+  259  vim Dockerfile
+  260  ls
+  261  cp -rf /root/.jenkins/workspace/Petclinic-Project-Pipeline-as-a-code-scm/02-Jenkins/petclinic-code/target/petclinic.war . 
+  262  ls
+  263  cp -rf ../apache/docker-compose.yaml . 
+  264  ls
+  265  vim docker-compose.yaml 
   266  ls
-  267  cd ..
-  268  ls
-  269  ls -ltr target/surefire-reports/TEST-*.xml
-  270  cd 
+  267  docker-compose up -d 
+  268  docker ps 
+  269  ls
+  270  docker-compose ps 
   271  ls
-  272  cd myproject-git/
+  272  > petclinic.war 
   273  ls
-  274  cd Jenkins-Files/
+  274  cd ..
   275  ls
-  276  cd devlopment/
+  276  cd ..
   277  ls
-  278  cp -rf Jenkinsfile Variable
-  279  ls
-  280  vim Jenkinsfile 
-  281  cd ../../
-  282  ls
-  283  git add . ; git commit -m "Verify"; git push 
-  284  git logs 
-  285  git log
-  286  git checkout demo-code
-  287  ls
-  288  echo "02" > CHANGEME.txt 
-  289  git add . ; git commit -m "Verify-02"; git push 
-  290  docker images 
-  291  docker run -d --name cont-01 ubuntu16-04-test-apache:v1
-  292  docker ps 
-  293  docker inspect 6b97cc61c877
-  294  curl 172.17.0.11
-  295  ls
-  296  docker run -d --name cont-02 ubuntu16-04-test-apache:v1
-  297  docker run -d --name cont-03 ubuntu16-04-test-apache:v1
-  298  docker ps 
-  299  ls
-  300  cd 03-Docker/ls
-  301  ls
-  302  cd 03-Docker/
-  303  ls
-  304  history > Day3_History.txt 
+  278  history > Day3_History.txt 

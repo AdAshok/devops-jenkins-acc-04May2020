@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  apache:
+    build: . 
+    ports:
+      - '30080:80'
+
+
+  myapache:
+    image: ubuntu16-04-test-apache:v1 
+    ports:
+      - '30081:80'
