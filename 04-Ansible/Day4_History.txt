@@ -83,3 +83,79 @@
    83  cd ..
    84  ls
    85  history  > Day4_History.txt
+   86  cd ..
+   87  ls
+   88  git add . ; git commit -m "04-Ansible"; git push 
+   89  ls
+   90  which ansible 
+   91  cd /etc/ansible/
+   92  ls
+   93  cd - 
+   94  ls
+   95  cd 04-Ansible/
+   96  ls
+   97  cp -rf 01-Inventory 02-Playbook-Basic
+   98  ls
+   99  cd 02-Playbook-Basic/
+  100  ls
+  101  vim inventory 
+  102  ls
+  103  vim playbook.yaml
+  104  ls
+  105  ansible-playbook -i inventory playbook.yaml 
+  106  ls
+  107  vim playbook.yaml 
+  108  ansible-playbook -i inventory playbook.yaml 
+  109  ls
+  110  vim playbook.yaml 
+  111  ansible-playbook -i inventory playbook.yaml 
+  112  ls
+  113  vim playbook.yaml 
+  114  ansible-playbook -i inventory playbook.yaml 
+  115  vim playbook.yaml 
+  116  ansible-playbook -i inventory playbook.yaml 
+  117  ls
+  118  cd ..
+  119  ls
+  120  cd ..
+  121  cd 02-Jenkins/
+  122  cd ..
+  123  ls
+  124  cd 04-Ansible/
+  125  ls
+  126  cd 02-Playbook-Basic/
+  127  ls
+  128  vim ansible.cfg
+  129  ls
+  130  cat /root/.ssh/known_hosts 
+  131  > /root/.ssh/known_hosts 
+  132  cat /root/.ssh/known_hosts 
+  133  ansible-playbook -i inventory playbook.yaml 
+  134  vim ansible.cfg
+  135  ansible-playbook -i inventory playbook.yaml 
+  136  cat /root/.ssh/known_hosts 
+  137  vim ansible.cfg
+  138  ansible-playbook -i inventory playbook.yaml 
+  139  ls
+  140  ansible-playbook -i inventory pllsaybook.yaml 
+  141  ls
+  142  mv inventory targetCI
+  143  ls
+  144  ansible-playbook -i inventory pllsaybook.yaml 
+  145  ansible-playbook -i inventory playbook.yaml 
+  146  ansible-playbook -i targetCI playbook.yaml 
+  147  ls
+  148  vi ansible.cfg 
+  149  ansible-playbook playbook.yaml 
+  150  ls
+  151  vim targetCI 
+  152  ansible-playbook playbook.yaml 
+  153  vim targetCI 
+  154  vim playbook.yaml 
+  155  ansible-playbook playbook.yaml 
+  156  ls
+  157  ansible-doc  apt 
+  158  ls
+  159  cd ..
+  160  ls
+  161  history > Day4_History.txt 

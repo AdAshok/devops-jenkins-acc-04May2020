@@ -1,0 +1,21 @@
+---
+
+- hosts: 'web:&Prod'
+  name: Setting WebServers
+  become: yes
+  tasks:
+  - name: Install Apache Packages
+    apt: name=apache2 state=present
+
+  - name: Start the Apache Service 
+    service: name=apache2 state=started  
+
+
+
+
+- hosts: db
+  name: Just an RnD
+  become: yes
+  tasks:
+  - name: Install UNzip Packages
+    apt: name=unzip state=present
