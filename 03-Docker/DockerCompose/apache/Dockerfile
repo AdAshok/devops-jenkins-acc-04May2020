@@ -14,5 +14,8 @@ RUN apt-get install apache2 -y
 COPY index.html /var/www/html/index.html
 COPY cow.html /var/www/html/cow.html
 
+# Expose Port
+EXPOSE 80
+
 # Start the Apache Service 
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]

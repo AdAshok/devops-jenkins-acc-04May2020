@@ -1,0 +1,85 @@
+    1  ls
+    2  apt-get update; apt-get install ansible sshpass -y 
+    3  ls
+    4  mkdir 01-Inventory
+    5  ls
+    6  cd 01-Inventory/
+    7  ls
+    8  vi inventory 
+    9  ls
+   10  cat inventory 
+   11  ansible all -i inventory -m ping -u vagrant -k 
+   12  ssh vagrant@172.42.42.101
+   13  cat /root/.ssh/known_hosts 
+   14  ansible all -i inventory -m ping -u vagrant -k 
+   15  ssh vagrant@172.42.42.102
+   16  ansible all -i inventory -m ping -u vagrant -k 
+   17  ansible all -i inventory -m ping -u vagrant 
+   18  ansible-doc -l 
+   19  ansible-doc apt
+   20  ls
+   21  df -h 
+   22  ansible all -i inventory -m command -a 'df -h' -u vagrant 
+   23  ansible all -i inventory -m command -a 'df -h' -u vagrant -k 
+   24  arch
+   25  ansible all -i inventory -m command -a 'arch' -u vagrant -k 
+   26  uname -a 
+   27  ansible all -i inventory -m command -a 'uname -a' -u vagrant -k 
+   28  cat /etc/*-release
+   29  ansible all -i inventory -m command -a 'cat /etc/*-release' -u vagrant -k 
+   30  cat /etc/*-release
+   31  ansible all -i inventory -m shell -a 'cat /etc/*-release' -u vagrant -k 
+   32  cat /etc/os-release
+   33  ansible all -i inventory -m command -a ' cat /etc/os-release' -u vagrant -k 
+   34  ls
+   35  ansible 172.42.42.102 -i inventory -m command -a ' cat /etc/os-release' -u vagrant -k 
+   36  ls
+   37  cd ..
+   38  ls
+   39  cd 01-Inventory/
+   40  ls
+   41  vim inventory 
+   42  ansible all -i inventory -m command -a ' cat /etc/os-release' -u vagrant -k 
+   43  ansible all -i inventory -m command -a 'arch' -u vagrant -k 
+   44  ansible web -i inventory -m command -a 'arch' -u vagrant -k 
+   45  ansible db -i inventory -m command -a 'arch' -u vagrant -k 
+   46  ls
+   47  vim inventory 
+   48  ansible web -i inventory -m command -a 'arch' -u vagrant -k 
+   49  ls
+   50  vim inventory 
+   51  ansible web -i inventory -m command -a 'arch' -u vagrant -k 
+   52  vim inventory 
+   53  ansible web -i inventory -m command -a 'arch' -u vagrant -k 
+   54  grep -i FORK /etc/ansible/ansible.cfg 
+   55  ls
+   56  vim inventory 
+   57  ansible web -i inventory -m command -a 'arch' -u vagrant -k 
+   58  ansible Prod -i inventory -m command -a 'arch' -u vagrant -k 
+   59  ansible Uat -i inventory -m command -a 'arch' -u vagrant -k 
+   60  vim inventory 
+   61  ansible 'Prod:Uat' -i inventory -m command -a 'arch' -u vagrant -k 
+   62  ansible 'Prod:&Uat' -i inventory -m command -a 'arch' -u vagrant -k 
+   63  ansible 'web:&Prod' -i inventory -m command -a 'arch' -u vagrant -k 
+   64  ansible 'db:&Prod' -i inventory -m command -a 'arch' -u vagrant -k 
+   65  ansible 'web:&Uat' -i inventory -m command -a 'arch' -u vagrant -k 
+   66  ls
+   67  vim inventory 
+   68  ansible 'web:&Uat' -i inventory -m command -a 'arch' -u vagrant -k 
+   69  ansible 'web:&Uat:!python4' -i inventory -m command -a 'arch' -u vagrant -k 
+   70  vim inventory 
+   71  ansible 'web:&Uat:!python4' -i inventory -m command -a 'arch' -u vagrant -k 
+   72  ls
+   73  vim inventory 
+   74  ansible dc -i inventory -m command -a 'arch' -u vagrant -k 
+   75  vim inventory 
+   76  ansible dc -i inventory -m command -a 'arch' 
+   77  ls
+   78  vim inventory 
+   79  ansible web -i inventory -m command -a 'arch' 
+   80  ansible 'web:&Prod' -i inventory -m command -a 'arch' 
+   81  ansible 'db:&Prod' -i inventory -m command -a 'arch' 
+   82  ls
+   83  cd ..
+   84  ls
+   85  history  > Day4_History.txt
