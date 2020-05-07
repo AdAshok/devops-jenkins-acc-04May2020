@@ -1,0 +1,44 @@
+---
+# Update1: Deploy Index Web Page
+# Update2: Deploy Info Template Web Page
+# Update3: Smart Playbook with When Clause
+# Update4: Local Varibale in Playbook & Templete. 
+# Update5: Mario Background Image. 
+
+- hosts: 'Prod'
+  name: Setting WebServers
+  become: yes
+  vars:
+    doc_root: "/var/www/html"
+    username: "Amit Vashist"
+  
+
+  tasks:
+  - name: Install Apache Packages
+    apt: name=apache2 state=present
+    when: ansible_os_family == "Debian"
+
+  - name: Start the Apache Service 
+    service: name=apache2 state=started 
+    when: ansible_os_family == "Debian"
+  
+  - name: Install HTTPD Packages
+    yum: name=httpd state=present
+    when: ansible_os_family == "RedHat"
+
+  - name: Start the HTTPD Service 
+    service: name=httpd state=started 
+    when: ansible_os_family == "RedHat"
+
+
+  - name: Deploy Index Web Page
+    copy: src=files/index.html dest={{doc_root}}/index.html
+
+  - name: Deploy Info Template Web Page
+    template: src=templates/info.j2 dest={{doc_root}}/info.html
+
+  - name: Download background Image
+    get_url: url=http://www.mariomayhem.com/downloads/wallpapers/6/nsmb_wp6_1024.jpg dest={{doc_root}}/mario.jpg mode=0755
+
+  - name: Deploy Info Template Web Page
+    template: src=templates/info-2.j2 dest={{doc_root}}/info-2.html
