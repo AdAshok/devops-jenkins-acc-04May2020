@@ -1,0 +1,547 @@
+    1  ls
+    2  apt-get update; apt-get install ansible sshpass -y 
+    3  ls
+    4  mkdir 01-Inventory
+    5  ls
+    6  cd 01-Inventory/
+    7  ls
+    8  vi inventory 
+    9  ls
+   10  cat inventory 
+   11  ansible all -i inventory -m ping -u vagrant -k 
+   12  ssh vagrant@172.42.42.101
+   13  cat /root/.ssh/known_hosts 
+   14  ansible all -i inventory -m ping -u vagrant -k 
+   15  ssh vagrant@172.42.42.102
+   16  ansible all -i inventory -m ping -u vagrant -k 
+   17  ansible all -i inventory -m ping -u vagrant 
+   18  ansible-doc -l 
+   19  ansible-doc apt
+   20  ls
+   21  df -h 
+   22  ansible all -i inventory -m command -a 'df -h' -u vagrant 
+   23  ansible all -i inventory -m command -a 'df -h' -u vagrant -k 
+   24  arch
+   25  ansible all -i inventory -m command -a 'arch' -u vagrant -k 
+   26  uname -a 
+   27  ansible all -i inventory -m command -a 'uname -a' -u vagrant -k 
+   28  cat /etc/*-release
+   29  ansible all -i inventory -m command -a 'cat /etc/*-release' -u vagrant -k 
+   30  cat /etc/*-release
+   31  ansible all -i inventory -m shell -a 'cat /etc/*-release' -u vagrant -k 
+   32  cat /etc/os-release
+   33  ansible all -i inventory -m command -a ' cat /etc/os-release' -u vagrant -k 
+   34  ls
+   35  ansible 172.42.42.102 -i inventory -m command -a ' cat /etc/os-release' -u vagrant -k 
+   36  ls
+   37  cd ..
+   38  ls
+   39  cd 01-Inventory/
+   40  ls
+   41  vim inventory 
+   42  ansible all -i inventory -m command -a ' cat /etc/os-release' -u vagrant -k 
+   43  ansible all -i inventory -m command -a 'arch' -u vagrant -k 
+   44  ansible web -i inventory -m command -a 'arch' -u vagrant -k 
+   45  ansible db -i inventory -m command -a 'arch' -u vagrant -k 
+   46  ls
+   47  vim inventory 
+   48  ansible web -i inventory -m command -a 'arch' -u vagrant -k 
+   49  ls
+   50  vim inventory 
+   51  ansible web -i inventory -m command -a 'arch' -u vagrant -k 
+   52  vim inventory 
+   53  ansible web -i inventory -m command -a 'arch' -u vagrant -k 
+   54  grep -i FORK /etc/ansible/ansible.cfg 
+   55  ls
+   56  vim inventory 
+   57  ansible web -i inventory -m command -a 'arch' -u vagrant -k 
+   58  ansible Prod -i inventory -m command -a 'arch' -u vagrant -k 
+   59  ansible Uat -i inventory -m command -a 'arch' -u vagrant -k 
+   60  vim inventory 
+   61  ansible 'Prod:Uat' -i inventory -m command -a 'arch' -u vagrant -k 
+   62  ansible 'Prod:&Uat' -i inventory -m command -a 'arch' -u vagrant -k 
+   63  ansible 'web:&Prod' -i inventory -m command -a 'arch' -u vagrant -k 
+   64  ansible 'db:&Prod' -i inventory -m command -a 'arch' -u vagrant -k 
+   65  ansible 'web:&Uat' -i inventory -m command -a 'arch' -u vagrant -k 
+   66  ls
+   67  vim inventory 
+   68  ansible 'web:&Uat' -i inventory -m command -a 'arch' -u vagrant -k 
+   69  ansible 'web:&Uat:!python4' -i inventory -m command -a 'arch' -u vagrant -k 
+   70  vim inventory 
+   71  ansible 'web:&Uat:!python4' -i inventory -m command -a 'arch' -u vagrant -k 
+   72  ls
+   73  vim inventory 
+   74  ansible dc -i inventory -m command -a 'arch' -u vagrant -k 
+   75  vim inventory 
+   76  ansible dc -i inventory -m command -a 'arch' 
+   77  ls
+   78  vim inventory 
+   79  ansible web -i inventory -m command -a 'arch' 
+   80  ansible 'web:&Prod' -i inventory -m command -a 'arch' 
+   81  ansible 'db:&Prod' -i inventory -m command -a 'arch' 
+   82  ls
+   83  cd ..
+   84  ls
+   85  history  > Day4_History.txt
+   86  cd ..
+   87  ls
+   88  git add . ; git commit -m "04-Ansible"; git push 
+   89  ls
+   90  which ansible 
+   91  cd /etc/ansible/
+   92  ls
+   93  cd - 
+   94  ls
+   95  cd 04-Ansible/
+   96  ls
+   97  cp -rf 01-Inventory 02-Playbook-Basic
+   98  ls
+   99  cd 02-Playbook-Basic/
+  100  ls
+  101  vim inventory 
+  102  ls
+  103  vim playbook.yaml
+  104  ls
+  105  ansible-playbook -i inventory playbook.yaml 
+  106  ls
+  107  vim playbook.yaml 
+  108  ansible-playbook -i inventory playbook.yaml 
+  109  ls
+  110  vim playbook.yaml 
+  111  ansible-playbook -i inventory playbook.yaml 
+  112  ls
+  113  vim playbook.yaml 
+  114  ansible-playbook -i inventory playbook.yaml 
+  115  vim playbook.yaml 
+  116  ansible-playbook -i inventory playbook.yaml 
+  117  ls
+  118  cd ..
+  119  ls
+  120  cd ..
+  121  cd 02-Jenkins/
+  122  cd ..
+  123  ls
+  124  cd 04-Ansible/
+  125  ls
+  126  cd 02-Playbook-Basic/
+  127  ls
+  128  vim ansible.cfg
+  129  ls
+  130  cat /root/.ssh/known_hosts 
+  131  > /root/.ssh/known_hosts 
+  132  cat /root/.ssh/known_hosts 
+  133  ansible-playbook -i inventory playbook.yaml 
+  134  vim ansible.cfg
+  135  ansible-playbook -i inventory playbook.yaml 
+  136  cat /root/.ssh/known_hosts 
+  137  vim ansible.cfg
+  138  ansible-playbook -i inventory playbook.yaml 
+  139  ls
+  140  ansible-playbook -i inventory pllsaybook.yaml 
+  141  ls
+  142  mv inventory targetCI
+  143  ls
+  144  ansible-playbook -i inventory pllsaybook.yaml 
+  145  ansible-playbook -i inventory playbook.yaml 
+  146  ansible-playbook -i targetCI playbook.yaml 
+  147  ls
+  148  vi ansible.cfg 
+  149  ansible-playbook playbook.yaml 
+  150  ls
+  151  vim targetCI 
+  152  ansible-playbook playbook.yaml 
+  153  vim targetCI 
+  154  vim playbook.yaml 
+  155  ansible-playbook playbook.yaml 
+  156  ls
+  157  ansible-doc  apt 
+  158  ls
+  159  cd ..
+  160  ls
+  161  history > Day4_History.txt 
+  162  cd ../
+  163  ls
+  164  git add . ; git commit -m "Playbook-Basic"; git push 
+  165  ls
+  166  cd 04-Ansible/
+  167  ls
+  168  cp -rf 02-Playbook-Basic 03-Playbook-Advance/
+  169  ls
+  170  cd 03-Playbook-Advance/
+  171  ls
+  172  vim playbook.yaml 
+  173  ls
+  174  mkdir files
+  175  vim files/index.html
+  176  ls
+  177  cat playbook.yaml 
+  178  ansible-playbook playbook.yaml 
+  179  ls
+  180  mkdir templates
+  181  ls
+  182  vim templates/info.j2
+  183  ls
+  184  vim playbook.yaml 
+  185  ansible-playbook playbook.yaml 
+  186  vim playbook.yaml 
+  187  ansible-playbook playbook.yaml 
+  188  ls
+  189  cd templates/
+  190  ls
+  191  vim info.j2 info-2.j2 
+  192  ls
+  193  cd ..
+  194  ls
+  195  vim playbook.yaml 
+  196  ls
+  197  vim playbook.yaml 
+  198  ansible-playbook playbook.yaml 
+  199  ls
+  200  cd templates/
+  201  ls
+  202  cp -rf info.j2 info-2.j2 
+  203  ls
+  204  vim info.j2 
+  205  ls
+  206  cd ..
+  207  ls
+  208  ansible-playbook playbook.yaml 
+  209  ip addr 
+  210  ls
+  211  vim playbook.yaml 
+  212  ansible-playbook playbook.yaml 
+  213  ls
+  214  vim playbook.yaml 
+  215  ;s
+  216  ls
+  217  vim templates/info-2.j2 
+  218  ansible-playbook playbook.yaml 
+  219  vim templates/info-2.j2 
+  220  ansible-playbook playbook.yaml 
+  221  ls
+  222  vim playbook.yaml 
+  223  ansible-playbook playbook.yaml 
+  224  ls
+  225  vim playbook.yaml 
+  226  ls
+  227  vim templates/info-2.j2 
+  228  ls
+  229  vim playbook.yaml 
+  230  ls
+  231  vim templates/info-2.j2 
+  232  ls
+  233  ansible-playbook playbook.yaml 
+  234  vim templates/info-2.j2 
+  235  vim playbook.yaml 
+  236  ansible-playbook playbook.yaml 
+  237  ls
+  238  cat playbook.yaml 
+  239  vim playbook.yaml 
+  240  ansible-playbook playbook.yaml 
+  241  vi playbook.yaml 
+  242  ansible-playbook playbook.yaml 
+  243  ls
+  244  vim playbook.yaml 
+  245  vim templates/info-2.j2 
+  246  ansible-playbook playbook.yaml 
+  247  ls
+  248  cd ../../
+  249  ls
+  250  git add . ; git commit -m "04-Ansible-Playbook-adv"; git push 
+  251  ls
+  252  cd 04-Ansible/
+  253  ls
+  254  cd 03-Playbook-Advance/
+  255  ls
+  256  cd ..
+  257  ls
+  258  cp -rf 03-Playbook-Advance 04-Tomcat
+  259  ls
+  260  cd 04-Tomcat/
+  261  ls
+  262  vim playbook.yaml 
+  263  ls
+  264  cd 
+  265  ls
+  266  mkdir -p  myapp/apps/webapps/
+  267  ;s
+  268  ls
+  269  cd myapp/apps/webapps/
+  270  ls
+  271  echo  "01" > index.html 
+  272  echo  "02" > myapp.html 
+  273  ls
+  274  cd ..
+  275  ls
+  276  cd ..
+  277  ls
+  278  tar -zcvf myapp.tar.gz myapp 
+  279  ls
+  280  mkdir unarchive
+  281  ls
+  282  mv myapp.tar.gz unarchive/
+  283  ls
+  284  cd unarchive/
+  285  ls
+  286  tar zxf myapp.tar.gz 
+  287  ls
+  288  rm -rf myapp
+  289  ls
+  290  mkdir tomcat/SP/apps/ -p 
+  291  ls
+  292  tar zxf myapp.tar.gz 
+  293  ls
+  294  rm -rf myapp
+  295  ls
+  296  tar zxf myapp.tar.gz -C tomcat/SP/apps/
+  297  ls
+  298  cd tomcat/SP/apps/
+  299  ls
+  300  ls -ltr myapp/
+  301  ls -R myapp/
+  302  ls
+  303  cd myapp/
+  304  ls
+  305  cd apps/
+  306  ls
+  307  mv webapps ../../
+  308  ls
+  309  cd ..
+  310  ls
+  311  rm -rf myapp webapps 
+  312  ls
+  313  cd ..
+  314  ls
+  315  cd ..
+  316  tar ztvf myapp.tar.gz -C tomcat/SP/apps/ 
+  317  ls
+  318  tar ztvf myapp.tar.gz -C tomcat/SP/apps/  --strip-components 1
+  319  tar ztvf myapp.tar.gz -C tomcat/SP/apps/  --strip-components 2
+  320  ls
+  321  tar zvf myapp.tar.gz -C tomcat/SP/apps/  --strip-components 2
+  322  tar -zvf myapp.tar.gz -C tomcat/SP/apps/  --strip-components 2
+  323  tar -zxf myapp.tar.gz -C tomcat/SP/apps/  --strip-components 2
+  324  ls
+  325  ls -R tomcat 
+  326  tar -zxf myapp.tar.gz -C tomcat/SP/apps/  --strip-components 1
+  327  ls -R tomcat 
+  328  tar -zxf myapp.tar.gz -C tomcat/SP/apps/  
+  329  ls -R tomcat 
+  330  ls
+  331  tar -ztvf myapp.tar.gz 
+  332  tar -zxf myapp.tar.gz  --strip-components 3
+  333  ls
+  334  cd ..
+  335  ls
+  336  c rm -rf myapp unarchive 
+  337  rm -rf myapp unarchive 
+  338  ls
+  339  cd myproject-git/
+  340  ls
+  341  cd 04-Ansible/04-Tomcat/
+  342  ls
+  343  vim playbook.yaml 
+  344  ls
+  345  ansible-playbook playbook.yaml 
+  346  l
+  347  vim playbook.yaml 
+  348  ansible-playbook playbook.yaml 
+  349  vim playbook.yaml 
+  350  ansible-playbook playbook.yaml 
+  351  vim playbook.yaml 
+  352  ls
+  353  ansible-playbook playbook.yaml 
+  354  ls
+  355  vim playbook.yaml 
+  356  ansible-playbook playbook.yaml 
+  357  vim templates/info.j2 
+  358  ls
+  359  cat playbook.yaml 
+  360  ansible-playbook playbook.yaml 
+  361  ls
+  362  ansible-playbook playbook.yaml 
+  363  ls
+  364  vim playbook.yaml 
+  365  ansible-playbook playbook.yaml 
+  366  vi playbook.yaml 
+  367  ansible-playbook playbook.yaml 
+  368  ls
+  369  cd ..
+  370  ls
+  371  cd ..
+  372  ls
+  373  git add . ; git commit -m "04-Tomcat"; git push 
+  374  lw
+  375  ls
+  376  cd 04-Ansible/
+  377  ls
+  378  cd 04-Tomcat/
+  379  ls
+  380  vim playbook.yaml 
+  381  ls
+  382  cp -rf /root/.jenkins/workspace/Petclinic-Project-Pipeline-as-a-code-scm/02-Jenkins/petclinic-code/target/petclinic.war files/
+  383  ls
+  384  ls -ltr files/
+  385  ls
+  386  ansible-playbook playbook.yaml 
+  387  vi playbook.yaml 
+  388  ansible-playbook playbook.yaml 
+  389  ls
+  390  > files/petclinic.war 
+  391  ls
+  392  cd ..
+  393  ls
+  394  git add . ; git commit -m "04-Tomcat/petclinic"; git push 
+  395  ls
+  396  cd 04-Tomcat/
+  397  ls
+  398  vim playbook.yaml 
+  399  ansible-doc unarchive
+  400  ls
+  401  vim playbook.yaml 
+  402  ansible-playbook playbook.yaml 
+  403  vim playbook.yaml 
+  404  ansible-playbook playbook.yaml 
+  405  ansible-playbook playbook.yaml --vvv
+  406  ansible-playbook playbook.yaml -vvv
+  407  ls
+  408  vim playbook.yaml 
+  409  ansible-playbook playbook.yaml 
+  410  ansible-doc unarchive
+  411  ls
+  412  cd ..
+  413  ls
+  414  rm -rf 04-Tomcat/
+  415  ls
+  416  git pull 
+  417  cd ..
+  418  ls
+  419  git config --list 
+  420  cd ..
+  421  ls
+  422  rm -rf mindtree-devops-27April2020 myproject-git/
+  423  ls
+  424  git clone https://github.com/amitvashisttech/devops-jenkins-acc-04May2020.git
+  425  ls
+  426  cd devops-jenkins-acc-04May2020/
+  427  ls
+  428  git branch 
+  429  git branch -r 
+  430  git pull --all
+  431  git branch 
+  432  git checkout -b demo-code origin/demo-code
+  433  git branch 
+  434  ls
+  435  cd 04-Ansible/ls
+  436  ls
+  437  cd 04-Ansible/
+  438  ls
+  439  cd 04-Tomcat/
+  440  ls
+  441  cat playbook.yaml 
+  442  cd ..
+  443  ls
+  444  history 
+  445  cd 04-Tomcat/
+  446  ls
+  447  cd ..
+  448  ls
+  449  cp -rf 04-Tomcat 05-Roles
+  450  cd 05-Roles/
+  451  ls
+  452  mkdir roles
+  453  ls
+  454  cd roles/
+  455  ls
+  456  ansible-galaxy init webserver
+  457  ls
+  458  apt-get install tree -y 
+  459  ls
+  460  tree webserver
+  461  ansible-galaxy init tomcat
+  462  ansible-galaxy init server-common
+  463  ls
+  464  tree . 
+  465  ls
+  466  cd webserver/
+  467  ls
+  468  cd 
+  469  ls
+  470  cd - 
+  471  ls
+  472  cd ..
+  473  ls
+  474  cd ..
+  475  ls
+  476  rm -rf files templates playbook.yaml 
+  477  ls
+  478  cp -rf ../03-Playbook-Advance/files/* roles/webserver/files/
+  479  cp -rf ../03-Playbook-Advance/templates/* roles/webserver/templates/
+  480  ls
+  481  tree roles/webserver/
+  482  vim roles/webserver/vars/main.yml 
+  483  tree roles/webserver/
+  484  ls
+  485  tree roles/webserver/
+  486  vim roles/webserver/tasks/main.yml 
+  487  ls
+  488  vim webserver.yaml
+  489  ansible-playbook webserver.yaml 
+  490  vim webserver.yaml
+  491  ansible-playbook webserver.yaml 
+  492  ls
+  493  vim roles/webserver/tasks/main.yml 
+  494  ansible-playbook webserver.yaml 
+  495  vim roles/webserver/vars/main.yml 
+  496  ansible-playbook webserver.yaml 
+  497  ls
+  498  cp -rf ../04-Tomcat/files/* roles/tomcat/files/
+  499  cp -rf ../04-Tomcat/templates/* roles/tomcat/templates/
+  500  ls
+  501  vim roles/tomcat/vars/main.yml 
+  502  ls
+  503  vim roles/tomcat/tasks/main.yml 
+  504  ls
+  505  vim roles/tomcat/handlers/main.yml 
+  506  ls
+  507  cp -rf webserver.yaml tomcat.yaml
+  508  vim tomcat.yaml 
+  509  ansible-playbook tomcat.yaml 
+  510  ls
+  511  vim webserver.yaml webwithtomcat.yaml
+  512  cp webserver.yaml webwithtomcat.yaml
+  513  ls
+  514  vim webwithtomcat.yaml 
+  515  ansible-playbook webwithtomcat.yaml 
+  516  vim webwithtomcat.yaml 
+  517  ls
+  518  vim roles/server-common/tasks/firewall.yaml
+  519  vim roles/server-common/tasks/git.yaml
+  520  ls
+  521  vim roles/server-common/tasks/common-user.yaml
+  522  grep -i vagrant /etc/shadow
+  523  vim roles/server-common/tasks/common-user.yaml
+  524  ls
+  525  vim webwithtomcat.yaml 
+  526  ls
+  527  ansible-playbook webwithtomcat.yaml 
+  528  ls
+  529  cat roles/server-common/tasks/git.yaml 
+  530  cat roles/server-common/tasks/firewall.yaml 
+  531  cat roles/server-common/tasks/common-user.yaml 
+  532  ls
+  533  tree roles/server-common/
+  534  cat roles/server-common/tasks/main.yml 
+  535  vim roles/server-common/tasks/main.yml
+  536  ls
+  537  ansible-playbook webwithtomcat.yaml 
+  538  vim roles/server-common/tasks/main.yml
+  539  ansible-playbook webwithtomcat.yaml 
+  540  ls
+  541  cd ../../
+  542  ls
+  543  git add . ; git commit -m "05-Roles"; git push
+  544  ls
+  545  cd 04-Ansible/
+  546  ls
+  547  history > Day5_History.txt
