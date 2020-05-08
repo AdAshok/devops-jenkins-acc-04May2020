@@ -545,3 +545,84 @@
   545  cd 04-Ansible/
   546  ls
   547  history > Day5_History.txt
+  548  ls
+  549  cd ..
+  550  ls
+  551  git add . ; git commit -m "Day5_History.txt"; git push
+  552  ls
+  553  sl
+  554  ls
+  555  cd ls
+  556  ls
+  557  cd 04-Ansible/
+  558  ls
+  559  cp -rf 05-Roles 06-Site
+  560  ls
+  561  cd 06-Site/
+  562  ls
+  563  rm webwithtomcat.yaml 
+  564  ls
+  565  vim tomcat.yaml 
+  566  ls
+  567  cat webserver.yaml 
+  568  ls
+  569  vim site.yaml
+  570  ls
+  571  vim tomcat.yaml 
+  572  vim webserver.yaml 
+  573  ls
+  574  cp -rf site.yaml server-common.yaml
+  575  vi server-common.yaml 
+  576  ls
+  577  ansible-playbook server-common.yaml 
+  578  ansible-playbook webserver.yaml 
+  579  ansible-playbook tomcat.yaml 
+  580  ls
+  581  vim site.yaml 
+  582  ansible-playbook site.yaml 
+  583  ls
+  584  ansible-playbook site.yaml 
+  585  ansible-playbook site.yaml --limit "172.42.42.102"
+  586  ls
+  587  vim site.yaml 
+  588  ansible-playbook site.yaml 
+  589  ansible-playbook site.yaml --limit "172.42.42.101"
+  590  ansible-playbook site.yaml --limit "Prod"
+  591  vim site.yaml 
+  592  ls
+  593  vim tomcat.yaml 
+  594  ls
+  595  vim site.yaml 
+  596  ls
+  597  ansible-playbook site.yaml 
+  598  ansible-playbook site.yaml --tags tom
+  599  ansible-playbook site.yaml --tags tom --limit "172.42.42.101"
+  600  ansible-playbook site.yaml --tags tom --limit "172.42.42.105"
+  601  vim targetCI 
+  602  ansible-playbook site.yaml --tags tom --limit "172.42.42.115"
+  603  ansible-playbook site.yaml --tags tom --limit "172.42.42.110"
+  604  ls
+  605  vim tomcat.yaml 
+  606  ansible-playbook site.yaml --tags tom 
+  607  vim tomcat.yaml 
+  608  ls
+  609  ansible-playbook tomcat.yaml 
+  610  vim tomcat.yaml 
+  611  ansible-playbook tomcat.yaml 
+  612  vim tomcat.yaml 
+  613  ansible-playbook tomcat.yaml 
+  614  vim tomcat.yaml 
+  615  ansible-playbook tomcat.yaml 
+  616  vim tomcat.yaml 
+  617  ansible-playbook tomcat.yaml 
+  618  ansible --version 
+  619  ls
+  620  vim tomcat.yaml 
+  621  cd ..
+  622  ls
+  623  cd ..
+  624  ls
+  625  cd 04-Ansible/ls
+  626  cd 04-Ansible/
+  627  ls
+  628  history > Day5_History.txt 

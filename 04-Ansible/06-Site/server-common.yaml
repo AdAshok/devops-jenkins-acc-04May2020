@@ -1,0 +1,6 @@
+---
+- hosts: Prod
+  name: Excute Common Tasks
+  become: yes 
+  roles: 
+  - server-common 
