@@ -1,0 +1,14 @@
+- hosts: '172.42.42.101'
+  name:  WebServers Deployment
+  become: yes
+  roles:
+  - webserver
+  - tomcat
+  - server-common
+
+
+- hosts: '172.42.42.102'
+  name:  Tomcat Deployment
+  become: yes
+  roles:
+  - tomcat

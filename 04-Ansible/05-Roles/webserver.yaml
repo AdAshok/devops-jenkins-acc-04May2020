@@ -1,0 +1,5 @@
+- hosts: 'Prod'
+  name:  WebServers Deployment
+  become: yes
+  roles:
+  - webserver

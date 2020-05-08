@@ -1,0 +1,3 @@
+---
+- name: Install Git Clinet Packages
+  apt: name=git state=present
