@@ -1,13 +1,14 @@
 ---
 # Update1: Getting Prepared for Tomcat & Download. 
 # Update2: Enable Info Page Deployment over Tomcat App Server. 
+# Update3: Petclinic War Deployment on Tomcat App Server. 
 
 - hosts: 'Prod'
   name:  Tomcat Deployment
   become: yes
   vars:
     doc_tomcat: "/opt/SP/apps/tomcat"
-    username: "Tomcat-Deployment-Test-3"
+    username: "Tomcat-Deployment-Test-4"
   
 
   tasks:
@@ -30,6 +31,9 @@
     template: src=templates/info.j2 dest={{doc_tomcat}}/webapps/myapp/info.html
     notify:
     - Restart Tomcat 
+
+  - name: Deploy Petclinic War File
+    copy: src=files/petclinic.war dest={{doc_tomcat}}/webapps/ mode=0644
 
 
   handlers:
